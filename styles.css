@@ -167,8 +167,14 @@ a{
     text-decoration-thickness: 4px;
 }
 
-/* TO DO: Part 4: Links are interactive elements, so they need focus and hover styles */
+a:hover{
+    text-decoration-color: var(--orange);
+}
 
+a:focus{
+    outline: 4px solid var(--gold);
+    outline-offset: 2px;
+}
 
 /* NAVIGATION STYLES */
 nav{
@@ -189,8 +195,9 @@ nav a{
     transition: background-color 500ms;
 }
 
-/* TO DO: Part 4: We added hover styles above for all of the links on the page, but these are different */
-
+nav a:hover{
+    background-color: var(--wht);
+}
 
 /* CONTAINER STYLES */
 main > section{
@@ -214,6 +221,12 @@ summary{
     font-size: 1.3rem;
 }
 
+summary:focus{
+    outline: 4px solid var(--orange);
+    outline-offset: 2px;
+    background-color: var(--lt-gray);
+}
+
 details{
 	max-width: calc(65ch - 32px);
 	margin: 0.5rem auto;
@@ -230,9 +243,6 @@ details[open] summary{
 summary::marker{
 	color: var(--orange);
 }
-
-/* TO DO: Part 4: The summary element opens and closes the details on the page. Review the styles of this interactive element and adjust as necessary */
-
 
 /* SPACE SECTION STYLES */
 #space ul{
